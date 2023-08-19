@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dGJ-F1-LDG">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DOLAP-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainPage" customModule="DolapCloneApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Ürün, kategori, marka ve @satıcı ara" translatesAutoresizingMaskIntoConstraints="NO" id="H5C-uI-jcM">
+                                <rect key="frame" x="0.0" y="92" width="313.5" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="9do-pK-WM4"/>
+                                </connections>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJN-4I-CB3">
+                                <rect key="frame" x="313.5" y="92" width="50" height="56"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="line.3.horizontal.circle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROe-FB-iwC">
+                                <rect key="frame" x="367.5" y="92" width="50.5" height="56"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                            </button>
+                            <stackView opaque="NO" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sMh-hQ-mEc">
+                                <rect key="frame" x="0.0" y="148" width="414" height="38"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTB-4C-EhM">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="38"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Bana özel" cornerStyle="small">
+                                            <backgroundConfiguration key="background" strokeWidth="0.0" strokeOutset="0.0">
+                                                <color key="strokeColor" red="0.53419494629999997" green="0.53419494629999997" blue="0.53419494629999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="20"/>
+                                            <color key="baseForegroundColor" name="DolapColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0d-VO-NhM">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="38"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Keşfet">
+                                            <backgroundConfiguration key="background" strokeWidth="0.0">
+                                                <color key="strokeColor" red="0.53419494629999997" green="0.53419494629999997" blue="0.53419494629999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="20"/>
+                                            <color key="baseForegroundColor" red="0.53419494629999997" green="0.53419494629999997" blue="0.53419494629999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="tintColor" red="0.53419494629999997" green="0.53419494629999997" blue="0.53419494629999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dolap-slider" translatesAutoresizingMaskIntoConstraints="NO" id="hJG-hv-YIG">
+                                <rect key="frame" x="0.0" y="186" width="414" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="6Hv-4d-sef"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senin İçin Seçtiklerimiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIB-dS-paD">
+                                <rect key="frame" x="12" y="294" width="402" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="500-pd-Fif">
+                                <rect key="frame" x="0.0" y="320" width="414" height="493"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="asH-im-OHJ">
+                                    <size key="itemSize" width="180" height="350"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="Iq9-eJ-qgH" customClass="ProductCell" customModule="DolapCloneApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="350"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Izh-gL-Ujj">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="350"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzl-tB-azr">
+                                                    <rect key="frame" x="12" y="244.5" width="54.5" height="26.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="amiparis" translatesAutoresizingMaskIntoConstraints="NO" id="5LF-De-75t">
+                                                    <rect key="frame" x="-10" y="0.0" width="200" height="200"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="200" id="Q67-DV-KiF"/>
+                                                        <constraint firstAttribute="width" constant="200" id="jJd-Rj-xz6"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Psw-dF-mVW">
+                                                    <rect key="frame" x="12" y="208" width="44.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zie-M3-1lN">
+                                                    <rect key="frame" x="133" y="12" width="51" height="34"/>
+                                                    <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" imagePlacement="leading">
+                                                        <imageReference key="image" image="heart" catalog="system" symbolScale="large"/>
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="bold"/>
+                                                        <color key="baseForegroundColor" systemColor="opaqueSeparatorColor"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                            </subviews>
+                                            <viewLayoutGuide key="safeArea" id="PIU-8v-OJo"/>
+                                            <constraints>
+                                                <constraint firstItem="Dzl-tB-azr" firstAttribute="leading" secondItem="PIU-8v-OJo" secondAttribute="leading" constant="12" id="DLM-c8-nYf"/>
+                                                <constraint firstItem="Zie-M3-1lN" firstAttribute="top" secondItem="Izh-gL-Ujj" secondAttribute="top" constant="12" id="F2v-E3-I4z"/>
+                                                <constraint firstItem="5LF-De-75t" firstAttribute="centerX" secondItem="Izh-gL-Ujj" secondAttribute="centerX" id="Khf-q3-6Si"/>
+                                                <constraint firstItem="Zie-M3-1lN" firstAttribute="trailing" secondItem="Izh-gL-Ujj" secondAttribute="trailing" constant="4" id="Shi-yX-k8W"/>
+                                                <constraint firstItem="5LF-De-75t" firstAttribute="top" secondItem="PIU-8v-OJo" secondAttribute="top" id="ZG8-XS-jna"/>
+                                                <constraint firstItem="Psw-dF-mVW" firstAttribute="leading" secondItem="PIU-8v-OJo" secondAttribute="leading" constant="12" id="ctd-t5-2co"/>
+                                                <constraint firstItem="Psw-dF-mVW" firstAttribute="top" secondItem="5LF-De-75t" secondAttribute="bottom" constant="8" id="ieV-lT-o5F"/>
+                                                <constraint firstItem="Dzl-tB-azr" firstAttribute="top" secondItem="Psw-dF-mVW" secondAttribute="bottom" constant="16" id="w3c-v1-gYP"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageViewProduct" destination="5LF-De-75t" id="csV-Pu-n9z"/>
+                                            <outlet property="labelPrice" destination="Dzl-tB-azr" id="vkJ-0M-ZMD"/>
+                                            <outlet property="labelProductBrand" destination="Psw-dF-mVW" id="cPe-eb-CF4"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="500-pd-Fif" secondAttribute="trailing" id="1Yi-Nf-f2W"/>
+                            <constraint firstItem="ROe-FB-iwC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="4" id="2Ck-AK-hRT"/>
+                            <constraint firstItem="500-pd-Fif" firstAttribute="top" secondItem="zIB-dS-paD" secondAttribute="bottom" constant="8" id="41H-7h-qsS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sMh-hQ-mEc" secondAttribute="trailing" id="77L-d1-39u"/>
+                            <constraint firstItem="sMh-hQ-mEc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FY0-fT-3JA"/>
+                            <constraint firstItem="H5C-uI-jcM" firstAttribute="bottom" secondItem="ROe-FB-iwC" secondAttribute="bottom" id="JVD-95-9Wc"/>
+                            <constraint firstItem="zIB-dS-paD" firstAttribute="top" secondItem="hJG-hv-YIG" secondAttribute="bottom" constant="8" id="Jy3-lK-aEa"/>
+                            <constraint firstItem="sMh-hQ-mEc" firstAttribute="top" secondItem="H5C-uI-jcM" secondAttribute="bottom" id="LWw-kC-pLJ"/>
+                            <constraint firstItem="hJG-hv-YIG" firstAttribute="top" secondItem="sMh-hQ-mEc" secondAttribute="bottom" id="MvQ-S6-iSL"/>
+                            <constraint firstItem="hJG-hv-YIG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Nub-23-vYa"/>
+                            <constraint firstItem="zIB-dS-paD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="Oin-5u-Jm5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hJG-hv-YIG" secondAttribute="trailing" id="TfL-f7-9rU"/>
+                            <constraint firstItem="jJN-4I-CB3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZhL-ta-jM0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="500-pd-Fif" secondAttribute="bottom" id="baq-kJ-9Ph"/>
+                            <constraint firstItem="sMh-hQ-mEc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="byQ-iJ-UoO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zIB-dS-paD" secondAttribute="trailing" id="dsr-hi-bKm"/>
+                            <constraint firstItem="H5C-uI-jcM" firstAttribute="bottom" secondItem="jJN-4I-CB3" secondAttribute="bottom" id="dt5-Ih-Qpr"/>
+                            <constraint firstItem="ROe-FB-iwC" firstAttribute="leading" secondItem="jJN-4I-CB3" secondAttribute="trailing" constant="4" id="i7Q-93-XuB"/>
+                            <constraint firstItem="ROe-FB-iwC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jUD-pQ-due"/>
+                            <constraint firstItem="sMh-hQ-mEc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kyE-mq-lHm"/>
+                            <constraint firstItem="sMh-hQ-mEc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mLR-9y-aWl"/>
+                            <constraint firstItem="H5C-uI-jcM" firstAttribute="trailing" secondItem="jJN-4I-CB3" secondAttribute="leading" id="nDe-9r-MEz"/>
+                            <constraint firstItem="H5C-uI-jcM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qGM-PR-Zyv"/>
+                            <constraint firstItem="500-pd-Fif" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xh2-Pi-Mh6"/>
+                            <constraint firstItem="H5C-uI-jcM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zOE-x4-EaP"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Ana Sayfa" image="house.fill" catalog="system" id="5YA-bx-bOC">
+                        <color key="badgeColor" name="DolapColor"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="DOLAP" id="19X-4q-YyG"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="productCollectionView" destination="500-pd-Fif" id="QTL-Lr-GRL"/>
+                        <outlet property="searchBar" destination="H5C-uI-jcM" id="UBn-jX-M7j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1814.4927536231885" y="-27.455357142857142"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="IYS-dL-npj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sSc-6T-JLG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="c9t-8m-nab"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="E8W-7x-h4z">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="DolapColor"/>
+                        <color key="barTintColor" systemColor="labelColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" systemColor="labelColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" systemColor="labelColor"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" name="DolapColor"/>
+                            <textAttributes key="titleTextAttributes">
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" name="DolapColor"/>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="psx-BB-nwV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="70a-Ak-Bqy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904.34782608695662" y="-27.455357142857142"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="Fkh-3o-h8W">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dGJ-F1-LDG" customClass="TabBarViewController" customModule="DolapCloneApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="house" catalog="system" id="vvp-Dt-sQ4">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.18823529410000001" green="0.81960784310000001" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" name="DolapColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="sSc-6T-JLG" kind="relationship" relationship="viewControllers" id="Qbo-CU-viC"/>
+                        <segue destination="iDs-Fm-Y9s" kind="relationship" relationship="viewControllers" id="bEi-FO-vEe"/>
+                        <segue destination="3iw-59-mzK" kind="relationship" relationship="viewControllers" id="eIi-OU-E0z"/>
+                        <segue destination="iLG-jp-4dk" kind="relationship" relationship="viewControllers" id="9pk-sE-WxH"/>
+                        <segue destination="L3h-Zg-P02" kind="relationship" relationship="viewControllers" id="Onz-ti-P4l"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Hh-kB-xKF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5.7971014492753632" y="-27.455357142857142"/>
+        </scene>
+        <!--Dolabım-->
+        <scene sceneID="4QF-hJ-tBK">
+            <objects>
+                <viewController id="3iw-59-mzK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FeP-ro-K7q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="7hl-15-SkU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dolabım" id="4I5-CZ-H2G">
+                        <color key="badgeColor" red="0.18823529410000001" green="0.81960784310000001" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jIH-BC-Cf0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6" y="731"/>
+        </scene>
+        <!--Sepetim-->
+        <scene sceneID="MGV-43-5JU">
+            <objects>
+                <viewController id="iLG-jp-4dk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l9l-J0-gLT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="WNg-2z-Slx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Sepetim" image="cart" catalog="system" id="hrY-nc-te6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gxb-LB-iMq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="771" y="731"/>
+        </scene>
+        <!--Hesabım-->
+        <scene sceneID="SHD-yN-0c1">
+            <objects>
+                <viewController id="L3h-Zg-P02" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nso-l7-ILF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="9Op-jU-BTE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Hesabım" image="person" catalog="system" id="Bbf-q6-Y6D"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MHP-1h-May" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1494" y="731"/>
+        </scene>
+        <!--Bildirimler-->
+        <scene sceneID="9GD-Q9-l3N">
+            <objects>
+                <viewController id="iDs-Fm-Y9s" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T0C-OD-9g1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="X25-38-zIM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bildirimler" image="bell" catalog="system" id="Uf9-Fw-elj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N0d-nx-Og3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-720" y="731"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="amiparis" width="800" height="1187"/>
+        <image name="bell" catalog="system" width="125" height="128"/>
+        <image name="cart" catalog="system" width="128" height="102"/>
+        <image name="dolap-slider" width="1194" height="311"/>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="line.3.horizontal.circle" catalog="system" width="128" height="123"/>
+        <image name="person" catalog="system" width="128" height="121"/>
+        <namedColor name="DolapColor">
+            <color red="0.14800000190734863" green="0.8320000171661377" blue="0.62800002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
